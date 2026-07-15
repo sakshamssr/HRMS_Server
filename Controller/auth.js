@@ -7,6 +7,12 @@ dotenv.config();
 
 let SECRET_KEY = process.env.SECRET_KEY;
 
+let status = (req,res)=>{
+    return res.status(200).json({
+        status:"ok",
+    })
+}
+
 // let signup = async(req,res) =>{
 //     let {name,email,password,conpassword} = req.body;
     
