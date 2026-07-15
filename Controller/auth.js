@@ -2,7 +2,10 @@ let auth_data = require("../Model/auth_schema")
 let jwt = require("jsonwebtoken")
 let bcrypt = require("bcrypt")
 
-let SECRET_KEY = "SAKSHAM_HRMS"
+let dotenv = require("dotenv")
+dotenv.config();
+
+let SECRET_KEY = process.env.SECRET_KEY;
 
 // let signup = async(req,res) =>{
 //     let {name,email,password,conpassword} = req.body;
